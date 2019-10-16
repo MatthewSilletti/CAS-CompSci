@@ -1,8 +1,0 @@
-What kind of value does the function getFirstVowel return?
-	It returns a string
-
-Of the three ways that you unwrapped the value of firstVowel, which do you feel was most appropriate for this situation, and why?
-	The double question mark operator was the most compact form of returning the value
-
-This exercise assumes that you do, in fact, have a vowel (of the English language) in your name. What, if anything, would you need to change about the code if your name was "Bjørk" or "Ghrftnx"?
-	You would have to increase the ammount of things that the code can work with and identify, and make it able to be flexible
