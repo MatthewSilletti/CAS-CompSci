@@ -27,9 +27,12 @@
                                 <rect key="frame" x="146" y="433" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Find My Schedule"/>
+                                <connections>
+                                    <action selector="getSchedule:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2lq-ZJ-DCk"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jas-du-nvm">
-                                <rect key="frame" x="20" y="495" width="374" height="96"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jas-du-nvm">
+                                <rect key="frame" x="20" y="495" width="374" height="204"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -40,6 +43,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="Label" destination="jas-du-nvm" id="TaS-vX-OhB"/>
                         <outlet property="findSchedule" destination="SBc-PL-b1D" id="Tmr-OZ-0DL"/>
                         <outlet property="pickerView" destination="XyD-Zy-ERP" id="5m1-rg-VP1"/>
                     </connections>

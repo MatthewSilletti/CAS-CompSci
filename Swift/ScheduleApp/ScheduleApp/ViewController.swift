@@ -30,9 +30,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         "W/TH":"Free Period",
     ]
     
-    let reg_A_Schedule = ["A","","","","",""]
     
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var Label: UILabel!
     @IBOutlet weak var findSchedule: UIButton!
     
     override func viewDidLoad() {
@@ -66,7 +66,32 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
-
+    @IBAction func getSchedule(_ sender: Any) {
+        let dayRowType = pickerView.selectedRow(inComponent: 0)
+        let ACBDay = dayTypes[dayRowType]
+        
+        let normalRotation:[String:[String]] = [
+            "A":["A","B","D","E","G","H"],
+            "B":["B","C","E","F","H","I"],
+            "C":["C","A","F","D","I","G"]
+        ]
+        
+        let myRegSchedule = getScheduleForDay(periods: normalRotation[ACBDay]!, mySchedule:mySchedule)
+        Label.text = myRegSchedule
+        
+    }
+   
+    func getScheduleForDay(periods:[String], mySchedule:[String: String]) -> String {
+            var output = ""
+            for period in periods{
+                output += "\(period) - "
+                output += mySchedule[period] ?? "Free Period"
+                output += "\n"
+            }
+        return output
+        }
+        
+    
 }
     
     
