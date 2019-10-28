@@ -13,6 +13,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var curDayType = "A"
     var curWeekday = "Monday"
     var curSchedule = "Regular"
+    var afternoonClass = ""
     
     let dayTypes = ["A","B","C"]
     let weekDays = ["Monday","Tuesday","Wednesday","Thursday","Friday"]
@@ -24,10 +25,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         "C":"Trig Pre-Calc",
         "D":"US History",
         "E":"Free Period",
-        "F":"English Honors",
-        "M 5/6":"Life Skills",
-        "T/F 5/6":"Film 3",
-        "W/TH":"Free Period",
+        "F":"English Honors"
     ]
     
     
@@ -70,18 +68,36 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let dayRowType = pickerView.selectedRow(inComponent: 0)
         let ACBDay = dayTypes[dayRowType]
         
-        let normalRotation:[String:[String]] = [
-            "A":["A","B","D","E","G","H"],
-            "B":["B","C","E","F","H","I"],
-            "C":["C","A","F","D","I","G"]
+        let morningRotation:[String:[String]] = [
+            "A":["A","B","D","E"],
+            "B":["B","C","E","F"],
+            "C":["C","A","F","D"]
         ]
         
-        let myRegSchedule = getScheduleForDay(periods: normalRotation[ACBDay]!, mySchedule:mySchedule)
-        Label.text = myRegSchedule
+       
+            let afternoonRowTypes = pickerView.selectedRow(inComponent: 1)
+            let MTWTFDay = weekDays[afternoonRowTypes]
+            
+            if MTWTFDay == "Monday" {
+                afternoonClass = "Life Skills"
+            }
+            else if MTWTFDay == "Tuesday" {
+                afternoonClass = "Film 3"
+            }
+            else if MTWTFDay == "Friday" {
+                afternoonClass = "Film 3"
+            } else {
+                afternoonClass = "Free Period"
+            }
+        
+        
+        
+        let myRegSchedule = getMorningScheduleForDay(periods: morningRotation[ACBDay]!, mySchedule:mySchedule)
+        Label.text = "\(myRegSchedule) + \(afternoonClass)"
         
     }
    
-    func getScheduleForDay(periods:[String], mySchedule:[String: String]) -> String {
+    func getMorningScheduleForDay(periods:[String], mySchedule:[String: String]) -> String {
             var output = ""
             for period in periods{
                 output += "\(period) - "
