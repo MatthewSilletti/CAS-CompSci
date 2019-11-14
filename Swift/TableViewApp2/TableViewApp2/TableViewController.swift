@@ -10,23 +10,31 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    let Boats:[String:[String]] = [
-        "Walter Boat": ["Fire Truck Red","Medium Size","12cc"],
-        "Alligator Boat": ["Alligator Color","Alligator Size","At Least 13cc"],
-        "Pirate Boat Ship": ["Black","Extra Large","200cc"],
-        "Canoe": ["White","Small/Medium","0cc"],
-        "Boomer Boat": ["Stupid Idiot Color","Small Like Boomers' Minds","-15cc"],
-        "Titanic": ["Ocean Blue","In Half","Fish Power"],
-        "House Boat": ["House Color","House Size","Family Of 5"],
-        "SS Kobie": ["Gray Smoke","Average Sized","Steam Engine"],
-        "SS SkyHerr": ["Butter Yellow","The Biggest","Pigs Running On Large Hampster Wheels"],
+//    let Boats:[String:[String]] = [
+//        "Walter Boat": ["Fire Truck Red","Medium Size","12cc"],
+//        "Alligator Boat": ["Alligator Color","Alligator Size","At Least 13cc"],
+//        "Pirate Boat Ship": ["Black","Extra Large","200cc"],
+//        "Canoe": ["White","Small/Medium","0cc"],
+//        "Boomer Boat": ["Stupid Idiot Color","Small Like Boomers' Minds","-15cc"],
+//        "Titanic": ["Ocean Blue","In Half","Fish Power"],
+//        "House Boat": ["House Color","House Size","Family Of 5"],
+//        "SS Kobie": ["Gray Smoke","Average Sized","Steam Engine"],
+//        "SS SkyHerr": ["Butter Yellow","The Biggest","Pigs Running On Large Hampster Wheels"],
+//    ]
+    
+    let boats:[Boat] = [
+        Boat(n: "Walter", p: -12, c: "Fire Truck Red", s: "Big"),
+        Boat(n: "Alligator Boat", p: 13, c: "Alligator Color", s: "Big Like Alligator"),
+        Boat(n: "Canoe", p: 0, c: "Wood", s: "Small"),
+        Boat(n: "Titanic", p: 100, c: "Ocean Blue", s: "In Half"),
+        Boat(n: "SS Jayjay", p: -1000000000, c: "Ugly", s: "Dumb"),
+        Boat(n: "House Boat", p: 30, c: "House Color", s: "Big"),
     ]
     
-    var boatNames = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        boatNames = Array(Boats.keys).sorted()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,14 +52,14 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return boatNames.count
+        return boats.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        let title = boatNames[indexPath.row]
+        let title = boats[indexPath.row].name
         cell.textLabel!.text = title
 
         return cell
@@ -102,11 +110,11 @@ class TableViewController: UITableViewController {
 //         Pass the selected object to the new view controller.
         let bd = segue.destination as! ViewController
         let indexPath = self.tableView.indexPathForSelectedRow
-        let boat = self.boatNames[indexPath!.row]
-        bd.boatName = boat
-        bd.boatColor = Boats[bd.boatName]![0]
-        bd.boatSize = Boats[bd.boatName]![1]
-        bd.boatPower = Boats[bd.boatName]![2]
+        let boat = self.boats[indexPath!.row]
+        bd.boatName = boat.name
+        bd.boatColor = boat.color
+        bd.boatSize = boat.size
+        bd.boatPower = "\(boat.power)"
     
     }
  
