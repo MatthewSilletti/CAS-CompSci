@@ -1,7 +1,5 @@
 import UIKit
 
-import UIKitFramework
-
 let fileUrl = Bundle.main.url(forResource: "pokemonList", withExtension: "json")
 
 let pokemonFileData = try! Data(contentsOf: fileUrl!)
