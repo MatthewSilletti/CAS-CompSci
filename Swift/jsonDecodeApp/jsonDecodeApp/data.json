@@ -1,0 +1,20 @@
+//
+//  data.json
+//  jsonDecodeApp
+//
+//  Created by Matthew Silletti on 12/4/19.
+//  Copyright © 2019 Riley John Gibbs. All rights reserved.
+//
+
+import Foundation
+
+{
+    "name": "Matthew Silletti",
+    "hobbies": [
+        "Games",
+        "Soccer",
+        "Volleyball",
+        "Football"
+    ],
+    "age": 17
+}

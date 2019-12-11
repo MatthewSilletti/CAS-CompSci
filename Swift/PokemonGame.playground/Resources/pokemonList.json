@@ -1,0 +1,39 @@
+{
+    
+    "Bulbasaur": {
+        "name": "Bulbasaur",
+        "stats": {
+            "health": 45,
+            "attack": 49,
+            "type": "Grass",
+            "weakness": "Fire",
+            "defense": 49
+        }
+        
+    },
+    
+    "Charmander": {
+        "name": "Charmander",
+        "stats": {
+            "health": 39,
+            "attack": 52,
+            "type": "Fire",
+            "weakness": "Water",
+            "defense": 43
+        }
+        
+    },
+    
+    "Squirtle": {
+        "name": "Squirtle",
+        "stats": {
+            "health": 44,
+            "attack": 48,
+            "type": "Water",
+            "weakness": "Grass",
+            "defense": 65
+        }
+        
+    }
+}
+
