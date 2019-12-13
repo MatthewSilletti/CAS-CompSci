@@ -3,11 +3,11 @@
     "Bulbasaur": {
         "name": "Bulbasaur",
         "stats": {
-            "health": 45,
-            "attack": 49,
+            "health": 193,
+            "attack": 196,
             "type": "Grass",
             "weakness": "Fire",
-            "defense": 49
+            "defense": 196
         }
         
     },
@@ -15,11 +15,11 @@
     "Charmander": {
         "name": "Charmander",
         "stats": {
-            "health": 39,
-            "attack": 52,
+            "health": 181,
+            "attack": 202,
             "type": "Fire",
             "weakness": "Water",
-            "defense": 43
+            "defense": 184
         }
         
     },
@@ -27,11 +27,11 @@
     "Squirtle": {
         "name": "Squirtle",
         "stats": {
-            "health": 44,
-            "attack": 48,
+            "health": 191,
+            "attack": 194,
             "type": "Water",
             "weakness": "Grass",
-            "defense": 65
+            "defense": 228
         }
         
     }
