@@ -34,7 +34,7 @@ class ViewController: UIViewController {
                     let id: String? = dictionary["opening_crawl"] as? String
                     
                     if let title = title{
-                         myLabel.text = ("\(title)" + "             " + "\(id)")
+                         myLabel.text = ("\(title)" + "             " + "\(id!)")
                     }
                    
                 }
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
                            let id: String? = dictionary["opening_crawl"] as? String
                            
                            if let title = title{
-                            myLabel.text = ("\(title)" + "             " + "\(id)")
+                            myLabel.text = ("\(title)" + "             " + "\(id!)")
                             
                     }
                 }
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
                         let id: Int? = dictionary["episode_id"] as? Int
                            
                         if let title = title{
-                                myLabel.text = ("\(title)" + "             " + "\(id)")
+                                myLabel.text = ("\(title)" + "             " + "\(id!)")
                     }
                 }
             }
