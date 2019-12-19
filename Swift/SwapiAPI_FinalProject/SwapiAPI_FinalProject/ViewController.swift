@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func buttonPress(_ sender: Any) {
-        let dataFieldValue = dataField.text
+        let dataFieldValue = dataField.text?.lowercased()
         let numberFieldValue = numberField.text
         if dataFieldValue != nil {
             let dataFieldValueConfirmed: String = dataFieldValue!
@@ -87,10 +87,38 @@ class ViewController: UIViewController {
                                 outputLabel2.text = "Designation Color = \(d)"
                                 outputLabel3.text =  "Language = \(l)"
                                 }
-                            }
+                            } else if dataFieldValueConfirmed == "vehicles" {
+                                let name: String? = dictionary["name"] as? String
+                                let _class: String? = dictionary["vehicle_class"] as? String
+                                let manufacturer: String? = dictionary["manufacturer"] as? String
+                                let cost: String? = dictionary["cost_in_credits"] as? String
+                                
+                                if let name = name, let _class = _class, let manufacturer = manufacturer, let cost = cost {
+                                    outputLabel.text = "Name = \(name)"
+                                    outputLabel1.text = "Class = \(_class)"
+                                    outputLabel2.text = "Manufacturer = \(manufacturer)"
+                                    outputLabel3.text =  "Cost = \(cost)"
+                                }
+                            } else if dataFieldValueConfirmed == "films" {
+                                let name: String? = dictionary["title"] as? String
+                                let epiNum: Int? = dictionary["episode_id"] as? Int
+                                let director: String? = dictionary["director"] as? String
+                                let rD: String? = dictionary["release_date"] as? String
+                                
+                                if let name = name, let epiNum = epiNum, let director = director, let rD = rD {
+                                    outputLabel.text = "Name = \(name)"
+                                    outputLabel1.text = "Episode Number = \(epiNum)"
+                                    outputLabel2.text = "Director = \(director)"
+                                    outputLabel3.text =  "Release Date = \(rD)"
+                                } else { outputLabel.text = "poop6"}
+                            } else { outputLabel.text = "poop5" }
                         } else { outputLabel.text = "poop4" }
                     } else { outputLabel.text = "poop3" }
-                } else { outputLabel.text = "poop2" }
+                } else { outputLabel.text = "No Data Available... Try Something Else"
+                         outputLabel1.text = "No Data Available... Try Something Else"
+                         outputLabel2.text = "No Data Available... Try Something Else"
+                         outputLabel3.text = "No Data Available... Try Something Else"
+                }
             } else { outputLabel.text = "poop1" }
         }
     }
