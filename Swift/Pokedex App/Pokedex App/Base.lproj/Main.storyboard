@@ -514,10 +514,10 @@
             </objects>
             <point key="canvasLocation" x="2855.072463768116" y="129.91071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller2 View Controller-->
         <scene sceneID="LwH-1v-RKE">
             <objects>
-                <viewController id="iOj-UW-xIP" sceneMemberID="viewController">
+                <viewController id="iOj-UW-xIP" customClass="ViewController2ViewController" customModule="Pokedex_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="abN-0Y-JN5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -634,34 +634,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DY-qv-xOQ">
+                                <rect key="frame" x="280" y="191" width="96" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMj-Ej-Ce8">
+                                <rect key="frame" x="280" y="276" width="96" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYv-iz-hQC">
+                                <rect key="frame" x="280" y="355" width="96" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="OHb-CH-hHX"/>
                     </view>
                     <navigationItem key="navigationItem" id="D7T-Cl-m12"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="1DY-qv-xOQ" id="pfy-iI-KSC"/>
+                        <outlet property="typeLabel" destination="NMj-Ej-Ce8" id="gQl-89-Jce"/>
+                        <outlet property="weaknessLabel" destination="eYv-iz-hQC" id="ktR-DE-k3Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rjb-Z6-dML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3708.6956521739135" y="132.58928571428572"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="xu5-oA-gSh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8K6-Gv-BeB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2oM-K5-GSE"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Dh-54-Gqf">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="scr-rZ-nSo"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9qU-7g-Ute" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
     </scenes>
     <resources>

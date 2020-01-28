@@ -51,17 +51,23 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    
+     // MARK: - Navigation
+
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("preparing")
+        let target  = segue.destination as! ViewController1
+        target.newPokemon = Pokemon(n: nameField.text!, t: typeField.text!, w: weaknessField.text!)
+         // Get the new view controller using segue.destination.
+         // Pass the selected object to the new view controller.
+     }
+     
+    
 }
 
 
-
-// MARK: - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let dest = segue.destination as! ViewController
-    let indexPath = self.tableView.indexPathForSelectedRow
-}
 
 
 
