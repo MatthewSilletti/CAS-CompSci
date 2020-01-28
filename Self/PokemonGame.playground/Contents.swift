@@ -5,7 +5,7 @@ let pokemonFileData = try! Data(contentsOf: fileUrl!)
 let json = try? JSONSerialization.jsonObject(with: pokemonFileData, options: [])
 let dictionary = json as! [String: Any?]
 
-let player1 = dictionary["Bulbasaur"] as! [String: Any]
+let player1 = dictionary["Charizard"] as! [String: Any]
 let player2 = dictionary["Squirtle"] as! [String: Any]
 
 let p1Name = player1["name"] as! String
