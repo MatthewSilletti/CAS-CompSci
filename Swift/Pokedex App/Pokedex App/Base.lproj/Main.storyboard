@@ -480,7 +480,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="←"/>
                                 <connections>
-                                    <segue destination="SPj-MM-KSB" kind="show" id="F37-yU-13g"/>
+                                    <segue destination="SPj-MM-KSB" kind="show" id="fz4-Xa-Y2W"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Ii-mG-7u8">
@@ -603,15 +603,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="→"/>
+                                <connections>
+                                    <segue destination="SPj-MM-KSB" kind="show" id="Cf2-L5-WUu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfS-YM-bO4">
                                 <rect key="frame" x="248" y="636" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="←"/>
-                                <connections>
-                                    <segue destination="qAW-ox-jlU" kind="show" id="Lfc-0e-z7C"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJ1-ky-Ykd">
                                 <rect key="frame" x="73" y="191" width="78" height="40"/>
@@ -675,7 +675,6 @@
         <image name="pencil.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jte-Lj-AUv"/>
-        <segue reference="Lfc-0e-z7C"/>
+        <segue reference="fz4-Xa-Y2W"/>
     </inferredMetricsTieBreakers>
 </document>
