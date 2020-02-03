@@ -1,0 +1,24 @@
+Pokedex App
+
+OVERVIEW
+
+This app is one that allows the user to input the name, type, and weakness of a pokemon and add it to a list of other pokemon.
+You can navigate by using the dpad, enabling the user to go back and forth from different views.
+When at the table view, you can click on a pokemon adn it opens up a seperate view with the more in depth data on the pokemon
+
+CURRENT PROBLEMS/NOT SOLVED
+
+- A user can only input and save one pokemon at a time, and every time that pokemon is edited it changes the whole data set.
+- When switching from certain view controllers to another, there is a possibility of a SIGABRT Error.
+- Only one Pokemon is available in the table view
+
+ORIGIONAL FEATURE LIST
+
+The user should be able to view all Pokemon from a central homepage
+The user should be able to learn the stats/info for each pokemon by clicking into one and seeing data about that specific entry
+The user should be able to add new pokemon to their pokedex
+The user should be able to add images for each pokemon
+Add in a search function to be able to find pokemon
+The list of pokemon should be ordered
+
+
