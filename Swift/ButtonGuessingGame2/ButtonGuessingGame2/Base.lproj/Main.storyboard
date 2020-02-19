@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SBM-AU-z7q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Menu-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainMenu" customModule="ButtonGuessingGame2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePN-dC-ttW">
+                                <rect key="frame" x="0.0" y="346" width="414" height="258"/>
+                                <state key="normal" title="Button 2"/>
+                                <connections>
+                                    <action selector="Level2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8Z-c2-6fn"/>
+                                    <segue destination="yfO-ro-CGn" kind="show" id="05G-Km-vXe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7L-kK-IRG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="258"/>
+                                <state key="normal" title="Button 1"/>
+                                <connections>
+                                    <action selector="Level1Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iJh-nj-XmV"/>
+                                    <segue destination="yfO-ro-CGn" kind="show" id="9Q1-1b-xTx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULy-ld-kek">
+                                <rect key="frame" x="0.0" y="604" width="414" height="258"/>
+                                <state key="normal" title="Button 3"/>
+                                <connections>
+                                    <action selector="Level3Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2AB-TP-sHW"/>
+                                    <segue destination="yfO-ro-CGn" kind="show" id="jG0-2m-g7n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ULy-ld-kek" firstAttribute="height" secondItem="i7L-kK-IRG" secondAttribute="height" id="8s9-rh-DZc"/>
+                            <constraint firstItem="i7L-kK-IRG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="D1D-hy-rqE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ePN-dC-ttW" secondAttribute="trailing" id="JWa-Mh-1ol"/>
+                            <constraint firstItem="ePN-dC-ttW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ju1-GX-V7X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i7L-kK-IRG" secondAttribute="trailing" id="Xgg-lt-sEk"/>
+                            <constraint firstItem="ePN-dC-ttW" firstAttribute="height" secondItem="i7L-kK-IRG" secondAttribute="height" id="YjH-1P-0Lk"/>
+                            <constraint firstItem="i7L-kK-IRG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aG7-FX-Mq5"/>
+                            <constraint firstItem="ULy-ld-kek" firstAttribute="top" secondItem="ePN-dC-ttW" secondAttribute="bottom" id="acK-eB-NUy"/>
+                            <constraint firstItem="ULy-ld-kek" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e5Q-tQ-Qtb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ULy-ld-kek" secondAttribute="trailing" id="lRw-oi-0Y8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ULy-ld-kek" secondAttribute="bottom" id="nTp-HC-qqA"/>
+                            <constraint firstItem="ULy-ld-kek" firstAttribute="width" secondItem="i7L-kK-IRG" secondAttribute="width" id="pG5-c2-iYU"/>
+                            <constraint firstItem="ePN-dC-ttW" firstAttribute="width" secondItem="i7L-kK-IRG" secondAttribute="width" id="tsC-Vz-dWw"/>
+                            <constraint firstItem="ePN-dC-ttW" firstAttribute="top" secondItem="i7L-kK-IRG" secondAttribute="bottom" id="x61-RN-Qrb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="p1X-4F-UrU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+        </scene>
+        <!--Game Screen-->
+        <scene sceneID="Eop-XX-Vqf">
+            <objects>
+                <viewController id="yfO-ro-CGn" customClass="GameScreen" customModule="ButtonGuessingGame2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dOb-lX-OG9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kVO-E2-cRq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bGH-u4-AAY">
+                                        <rect key="frame" x="43" y="52" width="329" height="671"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Tmp-of-XcT"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="afe-4P-N8M"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="n9E-nT-AHb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J1m-rH-eoQ"/>
+                    <connections>
+                        <outlet property="scrollView" destination="kVO-E2-cRq" id="7cM-4e-wDN"/>
+                        <outlet property="stackView" destination="bGH-u4-AAY" id="Soc-50-0dp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nis-vp-6Qa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973.913043478261" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ONa-iG-6L6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SBM-AU-z7q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FFy-Vv-zJ2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MXt-kY-YNz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAP-qa-9l4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="05G-Km-vXe"/>
+    </inferredMetricsTieBreakers>
+</document>
