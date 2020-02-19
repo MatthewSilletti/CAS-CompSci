@@ -30,7 +30,7 @@ class GameScreen: UIViewController {
             //newButton.superclass == newButtonClass.self
             newButton.setTitle("Button No.\(i)", for: .normal)
             newButton.setTitleColor(.black, for: .normal)
-            newButton.frame = CGRect(x: 0, y: 0, width: 327, height: 50)
+            newButton.frame = CGRect(x: 0, y: 0, width: 400, height: 50)
             newButton.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.6, alpha: 0.5)
             stackView.addArrangedSubview(newButton)
             newButton.num = i
@@ -45,8 +45,8 @@ class GameScreen: UIViewController {
             }
 
         }
-        stackView.frame = CGRect(x: 0, y: 0, width: 327, height: ButtonNum1!*50)
-        scrollView.contentSize = CGSize(width: 327, height: ButtonNum1!*50)
+        stackView.frame = CGRect(x: 0, y: 0, width: 400, height: ButtonNum1!*50)
+        scrollView.contentSize = CGSize(width: 400, height: ButtonNum1!*50)
         
       //FUNC THAT DOEST WORK!!!
         // how do i get newButton to be a part of the newButtonClass
