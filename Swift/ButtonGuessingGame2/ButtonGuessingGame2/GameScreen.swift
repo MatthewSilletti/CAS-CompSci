@@ -38,8 +38,10 @@ class GameScreen: UIViewController {
             
             if newButton.num == realNum {
                 newButton.addTarget(self, action: #selector(CorrectGuess), for: .touchUpInside)
-            } else {
-                newButton.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
+            } else if newButton.num > realNum {
+                newButton.addTarget(self, action: #selector(showAlertHigh), for: .touchUpInside)
+            } else if newButton.num < realNum {
+                newButton.addTarget(self, action: #selector(showAlertLow), for: .touchUpInside)
             }
 
         }
@@ -51,8 +53,16 @@ class GameScreen: UIViewController {
         
     }
     
-    @objc func showAlert() {
-        let alert = UIAlertController(title: "Whoopies!", message: "You Guessed Wrong", preferredStyle: .alert)
+    @objc func showAlertLow() {
+        let alert = UIAlertController(title: "Whoopies!", message: "You Guessed Wrong, Try Guessing Higher", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Quit", style: .destructive, handler: {(_) in return}))
+
+        
+        self.present(alert, animated: true, completion: {})
+    }
+    
+    @objc func showAlertHigh() {
+        let alert = UIAlertController(title: "Whoopies!", message: "You Guessed Wrong, Try Guessing Lower!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Quit", style: .destructive, handler: {(_) in return}))
 
         
