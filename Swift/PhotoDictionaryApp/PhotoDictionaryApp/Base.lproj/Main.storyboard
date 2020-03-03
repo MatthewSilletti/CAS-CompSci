@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oks-6P-ili">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoDictionaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PVM-3h-V9i">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xNQ-8z-f0c">
+                                        <rect key="frame" x="50" y="100" width="314" height="588"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="H1D-Pz-PKj" firstAttribute="bottom" secondItem="xNQ-8z-f0c" secondAttribute="bottom" constant="100" id="FDx-wl-FAb"/>
+                                    <constraint firstItem="H1D-Pz-PKj" firstAttribute="trailing" secondItem="xNQ-8z-f0c" secondAttribute="trailing" constant="50" id="HiX-2o-0fe"/>
+                                    <constraint firstItem="xNQ-8z-f0c" firstAttribute="top" secondItem="H1D-Pz-PKj" secondAttribute="top" constant="100" id="Nhr-Sg-nyw"/>
+                                    <constraint firstItem="xNQ-8z-f0c" firstAttribute="leading" secondItem="H1D-Pz-PKj" secondAttribute="leading" constant="50" id="lIQ-xg-UZY"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="htr-SG-Gz6"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="H1D-Pz-PKj"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PVM-3h-V9i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BiP-bt-4Mv"/>
+                            <constraint firstAttribute="bottom" secondItem="PVM-3h-V9i" secondAttribute="bottom" constant="20" symbolic="YES" id="HW2-j2-Pbh"/>
+                            <constraint firstItem="PVM-3h-V9i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S8z-cL-zTs"/>
+                            <constraint firstItem="PVM-3h-V9i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uyk-se-wsM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u0w-cU-esh">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="9Yj-hL-Z2Z">
+                            <connections>
+                                <action selector="takePhoto:" destination="BYZ-38-t0r" id="Xx1-J5-9qC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="PVM-3h-V9i" id="A2C-an-dPb"/>
+                        <outlet property="stackView" destination="xNQ-8z-f0c" id="xVz-7d-E4J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HQB-90-ilH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oks-6P-ili" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eul-MJ-588">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="46V-H0-KfM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rt0-7h-7b3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+</document>
