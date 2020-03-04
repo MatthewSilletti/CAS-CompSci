@@ -49,8 +49,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         takerController.dismiss(animated: true, completion: nil)
         //imageView.image = info[.originalImage] as? UIImage
         let newImageView = UIImageView(image: info[.originalImage] as! UIImage)
-        stackView.addArrangedSubview(newImageView)
-        //stackView.newLabel
+        //stackView.addArrangedSubview(newImageView)
+        let textField = UITextField()
+        textField.textColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 1)
+        textField.background = info[.originalImage] as! UIImage
+        stackView.addArrangedSubview(textField)
         
     }
 }
