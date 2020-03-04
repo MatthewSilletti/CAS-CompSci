@@ -50,6 +50,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         //imageView.image = info[.originalImage] as? UIImage
         let newImageView = UIImageView(image: info[.originalImage] as! UIImage)
         stackView.addArrangedSubview(newImageView)
+        //stackView.newLabel
         
     }
 }
