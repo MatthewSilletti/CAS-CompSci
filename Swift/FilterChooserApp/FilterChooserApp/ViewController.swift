@@ -1,16 +1,27 @@
 //
 //  ViewController.swift
-//  PhotoFilterApp
+//  FilterChooserApp
 //
-//  Created by Matthew Silletti on 3/3/20.
+//  Created by Matthew Silletti on 3/4/20.
 //  Copyright © 2020 Matthew Silletti. All rights reserved.
 //
 
 import UIKit
 
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var imageView: UIImageView!
+
+    var ChosenFilter = ""
+    
+    let Filter1 = "CIBoxBlur"
+    
+    let Filter2 = "CIColorCube"
+    
+    let Filter3 = "CIVignette"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +37,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let inputImage = image
         let context = CIContext(options: nil)
         
-        if let filter = CIFilter(name: "CIPhotoEffectTransfer") {
+        if let filter = CIFilter(name: "\(ChosenFilter)") {
             let beginImage = CIImage(image: inputImage)
             filter.setDefaults()
             filter.setValue(beginImage, forKey: kCIInputImageKey)
@@ -53,6 +64,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             self.present(imagePicker, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func didPressButton1(_ sender: Any) {
+        ChosenFilter = Filter1
+    }
+    
+    @IBAction func didPressButton2(_ sender: Any) {
+        ChosenFilter = Filter2
+    }
+    @IBAction func didPressButton3(_ sender: Any) {
+        ChosenFilter = Filter3
     }
 }
 
