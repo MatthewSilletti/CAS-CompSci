@@ -29,21 +29,21 @@
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca7-4c-sZZ">
                                 <rect key="frame" x="0.0" y="723" width="414" height="30"/>
-                                <state key="normal" title="Box Blur Filter"/>
+                                <state key="normal" title="Sepia Filter"/>
                                 <connections>
                                     <action selector="didPressButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M12-qf-Jp1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seQ-aL-NVQ">
                                 <rect key="frame" x="0.0" y="753" width="414" height="30"/>
-                                <state key="normal" title="Color Cube Filter"/>
+                                <state key="normal" title="Chrome Filter"/>
                                 <connections>
                                     <action selector="didPressButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vEF-zC-pj2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdj-af-1Mz">
                                 <rect key="frame" x="0.0" y="783" width="414" height="30"/>
-                                <state key="normal" title="Vignette Effect"/>
+                                <state key="normal" title="Noir Filter"/>
                                 <connections>
                                     <action selector="didPressButton3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KcO-KG-BaU"/>
                                 </connections>
