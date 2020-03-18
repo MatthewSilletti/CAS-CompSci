@@ -1,0 +1,19 @@
+Statement of Purpose:
+  An all encompasing app that can help with anything and everything that has to do with the coronavirus
+  
+Feature List:
+  A person should be able to put in their sympotms to see the persenage chance they might have the virus
+  A person should be able to calculate the percent chance that if they have the virus, how likley are they to die
+  A person should be able to have acess to the cdc website for direct information
+  A person should be able to have a direct line of contact with a professional, either by phone or email
+  A person should be able to have a list of places still open or closed because of the virus
+  A person should be able to see what essential items they might need in their house
+  A person should be able to have direct access to food delivery services
+  A person should be able to live track the ammount of cases and deaths in their city/state/country
+  A person should be able to buy adn trade supplies with other people over the app
+  A person should be able to see what the quarentine laws are from their city government.
+  
+Challenges:
+  - Aquiring the necesarry permits for the data i would require for the app, such as the direct access to the cdc wevsite and official state websites
+  - Access to resturants that are open/closed
+  - access to food delivery services' apis
