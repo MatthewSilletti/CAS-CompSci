@@ -8,7 +8,7 @@
 import MapKit
 import UIKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var chicfilaLabel: UILabel!
     @IBOutlet weak var homeLabel: UILabel!
@@ -17,6 +17,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var label: UILabel!
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    var locationManager: CLLocationManager!
     
     let CROSSROADS_LAT = 34.0240892
     let CROSSROADS_LONG = -118.4747321
@@ -31,6 +33,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // CheckForLocation()
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
         
     }
     @IBAction func zoomOut(_ sender: Any) {
@@ -66,12 +71,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let housePoint = MKMapPoint(houseLocation)
         
         
-        let compassButton = MKCompassButton(mapView: mapView)
-        compassButton.compassVisibility = .adaptive
-        compassButton.translatesAutoresizingMaskIntoConstraints = true
-        //compassButton.trailingAnchor.constraint(equalTo: mapView.trailingAnchor, constant: -12).isActive = true
-        //compassButton.topAnchor.constraint(equalTo: mapView.topAnchor, constant: 12).isActive = true
-        mapView.addSubview(compassButton)
+//        let compassButton = MKCompassButton(mapView: mapView)
+//        compassButton.compassVisibility = .adaptive
+//        compassButton.translatesAutoresizingMaskIntoConstraints = true
+//        //compassButton.trailingAnchor.constraint(equalTo: mapView.trailingAnchor, constant: -12).isActive = true
+//        //compassButton.topAnchor.constraint(equalTo: mapView.topAnchor, constant: 12).isActive = true
+//        mapView.addSubview(compassButton)
 
         
         let scaleview = MKScaleView(mapView: mapView)
@@ -112,6 +117,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let size = MKMapSize(width: 1000, height: 1000)
         let rect = MKMapRect(origin: point, size: size)
         mapView.setRegion(MKCoordinateRegion(rect), animated: true)
+        
 //        label.text = "CROSSROADS!"
 //        xrdsLabel.backgroundColor = UIColor(displayP3Red: 0.0, green: 255.0, blue: 0.0, alpha: 1.0)
     }
@@ -135,6 +141,21 @@ class ViewController: UIViewController, MKMapViewDelegate {
 //        homeLabel.backgroundColor = UIColor(displayP3Red: 0.0, green: 255.0, blue: 0.0, alpha: 1.0)
     }
     
+    @IBAction func findMe(_ sender: Any) {
+        locationManager.requestLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let span = mapView.region.span
+        print(span)
+        let coords = locations.suffix(1)[0].coordinate
+        let newRegion = MKCoordinateRegion(center: coords, span: span)
+        mapView.setRegion(newRegion, animated: true)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
     //func CheckForLocation() {
         //         let rect = mapView.visibleMapRect
         //        let crossroadsLocation = CLLocationCoordinate2DMake(CROSSROADS_LAT, CROSSROADS_LONG)

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocationFinderApp_MapKit_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5qX-zS-SbF">
+                                <rect key="frame" x="0.0" y="74" width="414" height="671"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clM-fY-Jfq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance From Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2t-eK-Ef1">
+                                <rect key="frame" x="0.0" y="832" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhr-B0-3PQ">
+                                <rect key="frame" x="207" y="793" width="207" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Zoom -"/>
+                                <connections>
+                                    <action selector="ZoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTZ-jn-Mve"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrZ-nS-iBm">
+                                <rect key="frame" x="0.0" y="793" width="207" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Zoom +"/>
+                                <connections>
+                                    <action selector="ZoomIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKJ-Qi-kaT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqF-Ma-FsG">
+                                <rect key="frame" x="0.0" y="745" width="414" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="FIND ME">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BHd-vr-hZ7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Dhr-B0-3PQ" firstAttribute="top" secondItem="CqF-Ma-FsG" secondAttribute="bottom" id="62P-Gb-fxq"/>
+                            <constraint firstItem="Dhr-B0-3PQ" firstAttribute="leading" secondItem="HrZ-nS-iBm" secondAttribute="trailing" id="EuK-vU-t6N"/>
+                            <constraint firstItem="clM-fY-Jfq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HDa-c4-dIP"/>
+                            <constraint firstItem="d2t-eK-Ef1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="I74-pG-d72"/>
+                            <constraint firstItem="CqF-Ma-FsG" firstAttribute="top" secondItem="5qX-zS-SbF" secondAttribute="bottom" id="MWR-W8-ype"/>
+                            <constraint firstItem="HrZ-nS-iBm" firstAttribute="top" secondItem="CqF-Ma-FsG" secondAttribute="bottom" id="PY0-vl-dbz"/>
+                            <constraint firstItem="Dhr-B0-3PQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aeM-91-qiy"/>
+                            <constraint firstItem="CqF-Ma-FsG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dNr-He-Qs3"/>
+                            <constraint firstItem="5qX-zS-SbF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dYY-qa-B2e"/>
+                            <constraint firstItem="CqF-Ma-FsG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="db2-Oj-bBa"/>
+                            <constraint firstItem="clM-fY-Jfq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="glP-jb-Gdb"/>
+                            <constraint firstItem="d2t-eK-Ef1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h0W-ZF-H3Y"/>
+                            <constraint firstItem="d2t-eK-Ef1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h7j-H2-UAd"/>
+                            <constraint firstItem="HrZ-nS-iBm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hi8-Q4-FTS"/>
+                            <constraint firstItem="5qX-zS-SbF" firstAttribute="top" secondItem="clM-fY-Jfq" secondAttribute="bottom" id="iHJ-hA-d3q"/>
+                            <constraint firstItem="clM-fY-Jfq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kyt-RO-fdM"/>
+                            <constraint firstItem="d2t-eK-Ef1" firstAttribute="top" secondItem="Dhr-B0-3PQ" secondAttribute="bottom" id="lOi-72-OZA"/>
+                            <constraint firstItem="d2t-eK-Ef1" firstAttribute="top" secondItem="HrZ-nS-iBm" secondAttribute="bottom" id="tNV-Tf-ru7"/>
+                            <constraint firstItem="5qX-zS-SbF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uM8-RK-ypL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentLocationLabel" destination="clM-fY-Jfq" id="Syy-Pt-EvN"/>
+                        <outlet property="distanceLabel" destination="d2t-eK-Ef1" id="WCb-7d-YsB"/>
+                        <outlet property="mapView" destination="5qX-zS-SbF" id="2QT-5r-dVu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="119.86607142857142"/>
+        </scene>
+    </scenes>
+</document>
