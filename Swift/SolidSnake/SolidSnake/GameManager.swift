@@ -223,7 +223,7 @@ class GameManager {
     
     func sound() {
         guard let url = Bundle.main.url(forResource: "encounter", withExtension: "mp3") else { return print("no worko") }
-        guard let player = AVAudioPlayer(contentsOf: url) else { return print("Nah bruh")}
+        guard let player = try? AVAudioPlayer(contentsOf: url) else { return print("Nah bruh")}
         player.play()
     }
 // TRIED TO IMPLEMENT SOUND AS MY AddiTION TO THE GAME BUT CANT FIGURE OUT WHATS WROGN WITH IT
