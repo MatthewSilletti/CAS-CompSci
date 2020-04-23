@@ -38,7 +38,7 @@ class GameManager {
         scene.playerPositions.append((10,12))
         renderChange()
         generateNewPoint()
-        //sound()
+        sound()
     }
     
     private func updatePlayerPosition() {
@@ -221,11 +221,11 @@ class GameManager {
         scene.bestScore.text = "Best Score: \(UserDefaults.standard.integer(forKey: "bestScore"))"
     }
     
-//    func sound() {
-//        guard let url = Bundle.main.url(forResource: "encounter", withExtension: "mp3") else { return print("no worko") }
-//        guard let player = AVAudioPlayer(contentsOf: url) else { return print("Nah bruh")}
-//        player.play()
-//    }
+    func sound() {
+        guard let url = Bundle.main.url(forResource: "encounter", withExtension: "mp3") else { return print("no worko") }
+        guard let player = AVAudioPlayer(contentsOf: url) else { return print("Nah bruh")}
+        player.play()
+    }
 // TRIED TO IMPLEMENT SOUND AS MY AddiTION TO THE GAME BUT CANT FIGURE OUT WHATS WROGN WITH IT
 // WAS ON AN ONLINE WEBSITE AND THE APPLE DEV PAGE AND COULDNT FIGURE OUT WHY NOT WORKING
     // need help on getting this working
